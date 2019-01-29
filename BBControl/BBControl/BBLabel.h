@@ -22,6 +22,10 @@
          width:(CGFloat)width
          color:(UIColor *)color;
 
+//阴影圆角
+- (void)shadow:(CGFloat)corner
+         color:(UIColor *)color;
+
 //适配大小
 + (CGSize)adjust:(CGFloat)font
             type:(BBFont)type

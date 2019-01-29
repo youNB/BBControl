@@ -44,6 +44,17 @@
     self.layer.borderWidth  = width;
 }
 
+//阴影圆角
+- (void)shadow:(CGFloat)corner
+         color:(UIColor *)color{
+    self.layer.cornerRadius  = corner;
+    self.layer.shadowColor   = color.CGColor;
+    self.layer.shadowOffset  = CGSizeZero;
+    self.layer.shadowOpacity = 0.2;
+    self.layer.shadowPath    = [UIBezierPath bezierPathWithRoundedRect:self.bounds
+                                                          cornerRadius:corner].CGPath;
+}
+
 //适配大小
 + (CGSize)adjust:(CGFloat)font
             type:(BBFont)type
